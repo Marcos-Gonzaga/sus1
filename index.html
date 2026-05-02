@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///home/usuario/Downloads/sus-facil-rio%20(2).html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SUS Facil Rio</title>
+<link href="./index1_files/css2" rel="stylesheet">
+<style>
+:root{--az:#0D47A1;--az2:#1565C0;--az3:#1976D2;--azc:#42A5F5;--azb:#E3F2FD;--vd:#2E7D32;--vd2:#4CAF50;--vdb:#E8F5E9;--vm:#C62828;--am:#F57F17;--amb:#FFF8E1;--cz:#F5F7FA;--cz2:#ECEFF1;--tx:#0D1B2A;--mt:#607D8B;--br:#FFFFFF;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--cz);color:var(--tx);min-height:100vh;overflow-x:hidden;}
+#splash{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(160deg,#0A1628 0%,#0D47A1 60%,#1565C0 100%);padding:2rem;text-align:center;transition:opacity 0.6s;}
+#splash.off{opacity:0;pointer-events:none;}
+.sp-circle{width:110px;height:110px;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center;margin:0 auto 0.8rem;box-shadow:0 0 40px rgba(255,255,255,0.2);font-size:3.5rem;animation:pu 2s ease-in-out infinite;}
+@keyframes pu{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.sp-name{font-family:"Instrument Serif",serif;font-size:1.8rem;color:white;}
+.sp-sub2{font-size:0.68rem;color:rgba(255,255,255,0.55);letter-spacing:0.2em;text-transform:uppercase;margin-top:0.2rem;}
+.sp-line{width:40px;height:2px;background:rgba(255,255,255,0.25);margin:1rem auto;}
+.sp-desc{font-size:0.9rem;color:rgba(255,255,255,0.72);line-height:1.7;max-width:280px;margin:0 auto 2rem;}
+.sp-btn{padding:1rem 2.5rem;background:white;color:var(--az);font-family:"Plus Jakarta Sans",sans-serif;font-weight:700;font-size:1rem;border:none;border-radius:50px;cursor:pointer;box-shadow:0 8px 25px rgba(0,0,0,0.2);}
+.sp-cred{margin-top:1.2rem;font-size:0.66rem;color:rgba(255,255,255,0.35);}
+#app{display:none;}
+#app.on{display:block;}
+.hdr{background:linear-gradient(135deg,#0A1628,#0D47A1);padding:0.85rem 1.2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;box-shadow:0 3px 15px rgba(13,71,161,0.3);}
+.hdr-left{display:flex;align-items:center;gap:0.7rem;}
+.hdr-ico{width:34px;height:34px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
+.hdr-ttl{font-family:"Instrument Serif",serif;font-size:0.95rem;color:white;line-height:1.1;}
+.hdr-ttl small{display:block;font-family:"Plus Jakarta Sans",sans-serif;font-size:0.46rem;color:rgba(255,255,255,0.48);letter-spacing:0.15em;text-transform:uppercase;}
+.btn-vlt{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:white;font-family:"Plus Jakarta Sans",sans-serif;font-weight:700;font-size:0.72rem;padding:0.3rem 0.75rem;border-radius:50px;cursor:pointer;}
+.gps-b{display:flex;align-items:center;gap:0.3rem;background:rgba(76,175,80,0.15);border:1px solid rgba(76,175,80,0.35);padding:0.22rem 0.65rem;border-radius:50px;font-size:0.63rem;color:#69F0AE;font-weight:700;}
+.gps-d{width:5px;height:5px;border-radius:50%;background:#69F0AE;animation:bk 1.5s infinite;}
+@keyframes bk{0%,100%{opacity:1}50%{opacity:0.3}}
+.scr{display:none;padding-bottom:85px;}
+.scr.on{display:block;}
+.hbusca{background:linear-gradient(160deg,#0A1628,#0D47A1,#1565C0);padding:1.5rem 1.2rem 2rem;}
+.hbusca-t{font-size:1.15rem;font-weight:700;color:white;margin-bottom:0.2rem;}
+.hbusca-s{font-size:0.8rem;color:rgba(255,255,255,0.62);margin-bottom:1.2rem;}
+.bbox{background:white;border-radius:18px;padding:1.1rem;box-shadow:0 8px 30px rgba(0,0,0,0.15);}
+.blbl{font-size:0.66rem;font-weight:700;color:var(--mt);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem;}
+.binp{width:100%;padding:0.78rem 1rem;border:2px solid var(--azb);border-radius:12px;font-family:"Plus Jakarta Sans",sans-serif;font-size:0.88rem;color:var(--tx);background:var(--cz);outline:none;margin-bottom:0.78rem;}
+.binp:focus{border-color:var(--azc);}
+.bbtn{width:100%;padding:0.88rem;background:linear-gradient(135deg,#0A1628,#1976D2);color:white;font-family:"Plus Jakarta Sans",sans-serif;font-weight:700;font-size:0.9rem;border:none;border-radius:12px;cursor:pointer;}
+.urg-ban{background:linear-gradient(135deg,#7B0000,#C62828);margin:1rem 1.2rem 0;border-radius:16px;padding:1rem 1.2rem;display:flex;align-items:center;gap:1rem;cursor:pointer;}
+.urg-em{font-size:1.9rem;flex-shrink:0;}
+.urg-tt{font-weight:700;font-size:0.9rem;color:white;margin-bottom:0.12rem;}
+.urg-ds{font-size:0.73rem;color:rgba(255,255,255,0.73);line-height:1.4;}
+.fila-w{background:white;border-radius:16px;margin:1rem 1.2rem 0;padding:1.1rem;box-shadow:0 3px 15px rgba(0,0,0,0.07);}
+.fila-tt{font-size:0.66rem;font-weight:700;color:var(--mt);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;}
+.fi{display:flex;align-items:center;gap:0.75rem;padding:0.65rem;background:var(--cz);border-radius:10px;margin-bottom:0.5rem;}
+.fi:last-child{margin-bottom:0;}
+.fi-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.fi-nm{font-size:0.8rem;font-weight:600;color:var(--tx);flex:1;}
+.fi-t{font-size:0.7rem;font-weight:700;padding:0.18rem 0.55rem;border-radius:50px;}
+.vd-c{background:var(--vdb);color:var(--vd);}
+.am-c{background:var(--amb);color:var(--am);}
+.vm-c{background:#FFEBEE;color:var(--vm);}
+.cat-lbl{font-size:0.66rem;font-weight:700;color:var(--mt);letter-spacing:0.1em;text-transform:uppercase;padding:1.1rem 1.2rem 0.6rem;}
+.cat-grd{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;padding:0 1.2rem;}
+.cc{background:white;border-radius:14px;padding:1.1rem 0.9rem;cursor:pointer;border:2px solid transparent;box-shadow:0 2px 10px rgba(0,0,0,0.06);display:flex;flex-direction:column;gap:0.4rem;}
+.cc:active{transform:scale(0.97);}
+.cc-em{font-size:1.9rem;}
+.cc-nm{font-weight:700;font-size:0.83rem;color:var(--tx);}
+.cc-ds{font-size:0.68rem;color:var(--mt);line-height:1.3;}
+.cc.u{border-color:#FFCDD2;background:linear-gradient(135deg,#FFF5F5,white);}
+.cc.c{border-color:var(--azb);background:linear-gradient(135deg,#F0F7FF,white);}
+.cc.e{border-color:var(--vdb);background:linear-gradient(135deg,#F0FFF4,white);}
+.cc.x{border-color:var(--amb);background:linear-gradient(135deg,#FFFDF0,white);}
+.cc.d{border-color:#F3E5F5;background:linear-gradient(135deg,#FAF0FF,white);}
+.cc.m{border-color:#E0F2F1;background:linear-gradient(135deg,#F0FFFE,white);}
+.px-sec{padding:1.1rem 1.2rem 0;}
+.px-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;}
+.px-tt{font-size:0.66rem;font-weight:700;color:var(--mt);letter-spacing:0.1em;text-transform:uppercase;}
+.vt{font-size:0.76rem;color:var(--az);font-weight:700;cursor:pointer;}
+.ubs-c{background:white;border-radius:14px;padding:1rem;margin-bottom:0.75rem;box-shadow:0 2px 10px rgba(0,0,0,0.06);cursor:pointer;border-left:4px solid var(--az);}
+.ubs-h{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:0.45rem;}
+.ubs-nm{font-weight:700;font-size:0.88rem;color:var(--tx);margin-bottom:0.08rem;}
+.ubs-tp{font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;}
+.ubs-dt{font-size:0.7rem;color:var(--mt);background:var(--cz);padding:0.18rem 0.55rem;border-radius:50px;white-space:nowrap;}
+.ubs-tgs{display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.5rem;}
+.ubs-tg{font-size:0.66rem;padding:0.12rem 0.45rem;border-radius:50px;background:var(--azb);color:var(--az);font-weight:600;}
+.ubs-fl{display:flex;align-items:center;gap:0.45rem;margin-bottom:0.6rem;}
+.ubs-fl-l{font-size:0.7rem;color:var(--mt);}
+.ubs-fl-b{font-size:0.7rem;font-weight:700;padding:0.12rem 0.45rem;border-radius:50px;}
+.ubs-ft{display:flex;gap:0.4rem;}
+.bmp{flex:1;padding:0.52rem;background:linear-gradient(135deg,#0A1628,#1976D2);color:white;font-weight:700;font-size:0.75rem;border:none;border-radius:50px;cursor:pointer;}
+.bsn{padding:0.52rem 0.75rem;background:#E8F5E9;color:#2E7D32;font-weight:700;font-size:0.75rem;border:none;border-radius:50px;cursor:pointer;}
+.bin{padding:0.52rem 0.75rem;background:var(--azb);color:var(--az);font-weight:700;font-size:0.75rem;border:none;border-radius:50px;cursor:pointer;}
+.guia-hero{background:linear-gradient(135deg,#0A1628,#1565C0);padding:1.4rem 1.2rem 0.9rem;}
+.guia-hero h2{font-family:"Instrument Serif",serif;font-size:1.4rem;color:white;margin-bottom:0.2rem;}
+.guia-hero p{font-size:0.8rem;color:rgba(255,255,255,0.68);}
+.gl{padding:1rem 1.2rem;}
+.sc{display:flex;gap:0.85rem;margin-bottom:0.9rem;}
+.sl{display:flex;flex-direction:column;align-items:center;}
+.sn{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#0A1628,#1976D2);color:white;font-weight:800;font-size:0.95rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.sl2{width:2px;flex:1;background:linear-gradient(to bottom,#BBDEFB,#E3F2FD);margin:0.25rem 0;min-height:18px;}
+.sbx{flex:1;background:white;border-radius:12px;padding:0.9rem;box-shadow:0 2px 10px rgba(0,0,0,0.06);margin-bottom:0.25rem;}
+.sej{font-size:1.2rem;margin-bottom:0.15rem;}
+.st{font-weight:700;font-size:0.88rem;margin-bottom:0.15rem;}
+.sd{font-size:0.8rem;color:var(--mt);line-height:1.5;}
+.uni-hero{background:linear-gradient(135deg,#1B5E20,#2E7D32);padding:1.1rem;}
+.uni-hero h2{font-family:"Instrument Serif",serif;font-size:1.35rem;color:white;margin-bottom:0.2rem;}
+.uni-hero p{font-size:0.8rem;color:rgba(255,255,255,0.68);}
+.regs{display:flex;gap:0.45rem;padding:0.75rem 1.2rem;overflow-x:auto;}
+.rb{padding:0.38rem 0.95rem;border-radius:50px;border:2px solid #E0E0E0;background:white;font-size:0.76rem;font-weight:700;color:var(--mt);cursor:pointer;white-space:nowrap;font-family:"Plus Jakarta Sans",sans-serif;}
+.rb.on{border-color:var(--vd);background:var(--vd);color:white;}
+.ul{padding:0 1.2rem;}
+.docs-hero{background:linear-gradient(135deg,#BF360C,#E64A19);padding:1.4rem 1.2rem 0.9rem;}
+.docs-hero h2{font-family:"Instrument Serif",serif;font-size:1.35rem;color:white;margin-bottom:0.2rem;}
+.docs-hero p{font-size:0.8rem;color:rgba(255,255,255,0.68);}
+.dl{padding:1rem 1.2rem;}
+.alrt{background:var(--amb);border:2px solid #FFE082;border-radius:12px;padding:0.9rem;margin-bottom:0.9rem;display:flex;gap:0.6rem;}
+.alrt-i{font-size:1.2rem;flex-shrink:0;}
+.alrt-t{font-size:0.8rem;color:#5D4037;line-height:1.5;}
+.ds{background:white;border-radius:14px;padding:1.1rem;margin-bottom:0.75rem;box-shadow:0 2px 10px rgba(0,0,0,0.05);}
+.dst{font-weight:700;font-size:0.88rem;color:var(--tx);margin-bottom:0.65rem;}
+.di{display:flex;align-items:flex-start;gap:0.55rem;margin-bottom:0.55rem;padding-bottom:0.55rem;border-bottom:1px solid var(--cz);}
+.di:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+.dc{font-size:0.95rem;flex-shrink:0;}
+.dt{font-size:0.83rem;color:var(--tx);line-height:1.4;}
+.do{font-size:0.7rem;color:var(--mt);margin-top:0.08rem;}
+.mod-bg{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.5);display:none;align-items:flex-end;}
+.mod-bg.on{display:flex;}
+.mod-box{background:white;border-radius:24px 24px 0 0;padding:1.5rem 1.5rem 3rem;width:100%;max-height:85vh;overflow-y:auto;}
+.mod-h{width:34px;height:3px;background:var(--cz2);border-radius:2px;margin:0 auto 1.1rem;}
+.mok{display:block;width:100%;padding:0.95rem;background:linear-gradient(135deg,#0A1628,#1976D2);color:white;font-family:"Plus Jakarta Sans",sans-serif;font-weight:700;font-size:0.92rem;border:none;border-radius:50px;cursor:pointer;margin-bottom:0.45rem;}
+.mcl{display:block;width:100%;padding:0.78rem;background:var(--cz2);color:var(--mt);font-family:"Plus Jakarta Sans",sans-serif;font-weight:700;font-size:0.86rem;border:none;border-radius:50px;cursor:pointer;}
+.bnav{position:fixed;bottom:0;left:0;right:0;background:white;border-top:2px solid var(--cz2);display:flex;z-index:999;box-shadow:0 -4px 15px rgba(0,0,0,0.07);}
+.ni{flex:1;padding:0.68rem 0.2rem 0.48rem;background:none;border:none;color:var(--mt);font-size:0.5rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:0.18rem;font-family:"Plus Jakarta Sans",sans-serif;}
+.ni.on{color:var(--az);}
+</style>
+</head>
+<body>
+<div id="splash">
+  <div style="margin-bottom:1.5rem;">
+    <div style="width:120px;height:120px;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center;margin:0 auto 0.9rem;box-shadow:0 0 50px rgba(255,255,255,0.25);border:3px solid rgba(255,255,255,0.2);animation:pu 2s ease-in-out infinite;">
+      <div style="text-align:center;">
+        <div style="font-size:2.8rem;line-height:1;">⚕️</div>
+        <div style="font-size:0.5rem;font-weight:800;color:#0D47A1;letter-spacing:0.15em;text-transform:uppercase;margin-top:0.15rem;">SUS</div>
+      </div>
+    </div>
+    <div style="font-family:Instrument Serif,serif;font-size:2rem;color:white;font-weight:400;letter-spacing:0.02em;">SUS Facil Rio</div>
+    <div style="font-size:0.65rem;color:rgba(255,255,255,0.5);letter-spacing:0.22em;text-transform:uppercase;margin-top:0.25rem;">Navegador Inteligente do SUS</div>
+  </div>
+  <div class="sp-line"></div>
+  <div class="sp-desc">Encontre a unidade certa, saiba o que levar, pegue sua senha virtual e chegue preparado.</div>
+  <button class="sp-btn" onclick="mostrarTutorial()">📍 Ativar Localizacao</button>
+  <div class="sp-cred">Marcos Gonzaga · Rio de Janeiro · 2026</div>
+</div>
+<div id="tutorial" style="display:none;">
+  <div style="position:fixed;inset:0;z-index:90;background:#0A1628;display:flex;flex-direction:column;">
+    <!-- Header -->
+    <div style="padding:1.5rem 1.2rem 0.5rem;display:flex;justify-content:space-between;align-items:center;">
+      <div style="font-size:0.68rem;font-weight:700;color:rgba(255,255,255,0.4);letter-spacing:0.15em;text-transform:uppercase;">COMO USAR</div>
+      <button onclick="pularTutorial()" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.6);font-family:Plus Jakarta Sans,sans-serif;font-size:0.75rem;font-weight:600;padding:0.3rem 0.8rem;border-radius:50px;cursor:pointer;">Pular</button>
+    </div>
+
+    <!-- Slides -->
+    <div style="flex:1;overflow:hidden;position:relative;">
+      
+      <!-- Slide 1 -->
+      <div class="tslide on" id="ts0">
+        <div style="text-align:center;padding:2rem 1.5rem;">
+          <div style="font-size:5rem;margin-bottom:1.2rem;">🏥</div>
+          <div style="font-family:Instrument Serif,serif;font-size:1.8rem;color:white;margin-bottom:0.8rem;line-height:1.2;">Bem-vindo ao<br>SUS Facil Rio</div>
+          <div style="font-size:0.9rem;color:rgba(255,255,255,0.65);line-height:1.7;max-width:280px;margin:0 auto;">O app que simplifica o SUS para voce. Encontre unidades, saiba o que levar e pegue sua senha sem sair de casa.</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border-radius:16px;margin:0 1.5rem;padding:1.2rem;">
+          <div style="display:flex;flex-direction:column;gap:0.8rem;">
+            <div style="display:flex;align-items:center;gap:0.8rem;"><div style="font-size:1.5rem;flex-shrink:0;">📍</div><div style="font-size:0.85rem;color:rgba(255,255,255,0.75);">Encontre a UBS ou UPA mais proxima de voce</div></div>
+            <div style="display:flex;align-items:center;gap:0.8rem;"><div style="font-size:1.5rem;flex-shrink:0;">🏯</div><div style="font-size:0.85rem;color:rgba(255,255,255,0.75);">Pegue sua senha virtual antes de sair de casa</div></div>
+            <div style="display:flex;align-items:center;gap:0.8rem;"><div style="font-size:1.5rem;flex-shrink:0;">📋</div><div style="font-size:0.85rem;color:rgba(255,255,255,0.75);">Saiba exatamente o que levar em cada tipo de consulta</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="tslide" id="ts1">
+        <div style="text-align:center;padding:2rem 1.5rem 1rem;">
+          <div style="font-size:5rem;margin-bottom:1.2rem;">📍</div>
+          <div style="font-family:Instrument Serif,serif;font-size:1.8rem;color:white;margin-bottom:0.8rem;">GPS Inteligente</div>
+          <div style="font-size:0.9rem;color:rgba(255,255,255,0.65);line-height:1.7;max-width:280px;margin:0 auto 1.5rem;">O app usa seu GPS para encontrar as unidades de saude mais proximas de voce em tempo real.</div>
+        </div>
+        <div style="margin:0 1.5rem;display:flex;flex-direction:column;gap:0.7rem;">
+          <div style="background:rgba(76,175,80,0.15);border:1px solid rgba(76,175,80,0.3);border-radius:14px;padding:1rem;display:flex;gap:0.8rem;align-items:flex-start;">
+            <div style="font-size:1.3rem;flex-shrink:0;">✅</div>
+            <div><div style="font-weight:700;font-size:0.85rem;color:#69F0AE;margin-bottom:0.2rem;">Como ativar o GPS</div><div style="font-size:0.8rem;color:rgba(255,255,255,0.65);line-height:1.5;">Quando o app pedir permissao de localizacao, toque em PERMITIR. Isso e necessario para encontrar as unidades proximas.</div></div>
+          </div>
+          <div style="background:rgba(255,152,0,0.15);border:1px solid rgba(255,152,0,0.3);border-radius:14px;padding:1rem;display:flex;gap:0.8rem;align-items:flex-start;">
+            <div style="font-size:1.3rem;flex-shrink:0;">💡</div>
+            <div><div style="font-weight:700;font-size:0.85rem;color:#FFB74D;margin-bottom:0.2rem;">Sem GPS?</div><div style="font-size:0.8rem;color:rgba(255,255,255,0.65);line-height:1.5;">Nao tem problema! Voce pode buscar manualmente pela regiao ou pelo nome da unidade.</div></div>
+          </div>
+          <div style="background:rgba(13,71,161,0.3);border:1px solid rgba(66,165,245,0.3);border-radius:14px;padding:1rem;display:flex;gap:0.8rem;align-items:flex-start;">
+            <div style="font-size:1.3rem;flex-shrink:0;">📱</div>
+            <div><div style="font-weight:700;font-size:0.85rem;color:#90CAF9;margin-bottom:0.2rem;">iPhone</div><div style="font-size:0.8rem;color:rgba(255,255,255,0.65);line-height:1.5;">Para melhor funcionamento, acesse pelo Safari e permita o acesso a localizacao quando solicitado.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="tslide" id="ts2">
+        <div style="text-align:center;padding:2rem 1.5rem 1rem;">
+          <div style="font-size:5rem;margin-bottom:1.2rem;">🏯</div>
+          <div style="font-family:Instrument Serif,serif;font-size:1.8rem;color:white;margin-bottom:0.8rem;">Senha Virtual</div>
+          <div style="font-size:0.9rem;color:rgba(255,255,255,0.65);line-height:1.7;max-width:280px;margin:0 auto 1.5rem;">Pegue sua senha antes de sair de casa e acompanhe o tempo de espera.</div>
+        </div>
+        <div style="margin:0 1.5rem;background:rgba(255,255,255,0.06);border-radius:16px;padding:1.2rem;">
+          <div style="display:flex;flex-direction:column;gap:0.9rem;">
+            <div style="display:flex;gap:0.8rem;align-items:flex-start;"><div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#0A1628,#1976D2);color:white;font-weight:700;font-size:0.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div><div style="font-size:0.85rem;color:rgba(255,255,255,0.75);padding-top:0.2rem;">Encontre a unidade de saude desejada</div></div>
+            <div style="display:flex;gap:0.8rem;align-items:flex-start;"><div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#0A1628,#1976D2);color:white;font-weight:700;font-size:0.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div><div style="font-size:0.85rem;color:rgba(255,255,255,0.75);padding-top:0.2rem;">Toque no botao <strong style="color:#69F0AE;">🏯 Senha</strong></div></div>
+            <div style="display:flex;gap:0.8rem;align-items:flex-start;"><div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#0A1628,#1976D2);color:white;font-weight:700;font-size:0.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div><div style="font-size:0.85rem;color:rgba(255,255,255,0.75);padding-top:0.2rem;">Guarde seu numero de senha</div></div>
+            <div style="display:flex;gap:0.8rem;align-items:flex-start;"><div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#0A1628,#1976D2);color:white;font-weight:700;font-size:0.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;">4</div><div style="font-size:0.85rem;color:rgba(255,255,255,0.75);padding-top:0.2rem;">Apresente o numero ao chegar na unidade</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="tslide" id="ts3">
+        <div style="text-align:center;padding:2rem 1.5rem 1rem;">
+          <div style="font-size:5rem;margin-bottom:1.2rem;">🚨</div>
+          <div style="font-family:Instrument Serif,serif;font-size:1.8rem;color:white;margin-bottom:0.8rem;">Emergencias</div>
+          <div style="font-size:0.9rem;color:rgba(255,255,255,0.65);line-height:1.7;max-width:280px;margin:0 auto 1.5rem;">Numeros importantes que voce precisa saber.</div>
+        </div>
+        <div style="margin:0 1.5rem;display:flex;flex-direction:column;gap:0.7rem;">
+          <div style="background:rgba(198,40,40,0.2);border:1px solid rgba(198,40,40,0.4);border-radius:14px;padding:1rem;display:flex;justify-content:space-between;align-items:center;">
+            <div><div style="font-weight:700;color:white;font-size:0.9rem;">🚕 SAMU</div><div style="font-size:0.78rem;color:rgba(255,255,255,0.6);">Urgencias e emergencias</div></div>
+            <div style="font-family:Instrument Serif,serif;font-size:2rem;color:#EF9A9A;font-weight:400;">192</div>
+          </div>
+          <div style="background:rgba(198,40,40,0.2);border:1px solid rgba(198,40,40,0.4);border-radius:14px;padding:1rem;display:flex;justify-content:space-between;align-items:center;">
+            <div><div style="font-weight:700;color:white;font-size:0.9rem;">🚒 Bombeiros</div><div style="font-size:0.78rem;color:rgba(255,255,255,0.6);">Resgate e acidentes</div></div>
+            <div style="font-family:Instrument Serif,serif;font-size:2rem;color:#EF9A9A;font-weight:400;">193</div>
+          </div>
+          <div style="background:rgba(13,71,161,0.3);border:1px solid rgba(66,165,245,0.3);border-radius:14px;padding:1rem;display:flex;justify-content:space-between;align-items:center;">
+            <div><div style="font-weight:700;color:white;font-size:0.9rem;">🧠 CVV</div><div style="font-size:0.78rem;color:rgba(255,255,255,0.6);">Saude mental - 24h</div></div>
+            <div style="font-family:Instrument Serif,serif;font-size:2rem;color:#90CAF9;font-weight:400;">188</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Dots e Botoes -->
+    <div style="padding:1.2rem 1.5rem 2.5rem;">
+      <div style="display:flex;justify-content:center;gap:0.5rem;margin-bottom:1.2rem;" id="tdots">
+        <div class="tdot on" id="td0"></div>
+        <div class="tdot" id="td1"></div>
+        <div class="tdot" id="td2"></div>
+        <div class="tdot" id="td3"></div>
+      </div>
+      <div style="display:flex;gap:0.6rem;">
+        <button id="tbtn-prev" onclick="tPrev()" style="display:none;flex:1;padding:0.9rem;background:rgba(255,255,255,0.1);color:white;font-family:Plus Jakarta Sans,sans-serif;font-weight:700;font-size:0.9rem;border:1px solid rgba(255,255,255,0.2);border-radius:50px;cursor:pointer;">← Anterior</button>
+        <button id="tbtn-next" onclick="tNext()" style="flex:1;padding:0.9rem;background:linear-gradient(135deg,#1565C0,#42A5F5);color:white;font-family:Plus Jakarta Sans,sans-serif;font-weight:700;font-size:0.9rem;border:none;border-radius:50px;cursor:pointer;">Proximo →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.tslide{display:none;height:100%;overflow-y:auto;}
+.tslide.on{display:block;}
+.tdot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.2);transition:all 0.3s;}
+.tdot.on{width:24px;border-radius:50px;background:#42A5F5;}
+</style>
+
+<div id="app">
+  <div class="hdr">
+    <div class="hdr-left">
+      <button class="btn-vlt" id="btn-vlt" onclick="irHome()">← Inicio</button>
+      <div style="width:36px;height:36px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,0.2);">
+        <div style="text-align:center;line-height:1;">
+          <div style="font-size:1rem;">⚕️</div>
+        </div>
+      </div>
+      <div class="hdr-ttl">SUS Facil Rio<small>Rio de Janeiro · Saude Publica</small></div>
+    </div>
+    <div class="gps-b"><div class="gps-d"></div><span id="gps-txt">GPS</span></div>
+  </div>
+  <div class="scr on" id="s-home">
+    <div class="hbusca">
+      <div class="hbusca-t">👋 Ola! Como podemos ajudar?</div>
+      <div class="hbusca-s">Digite seu problema ou escolha uma categoria</div>
+      <div class="bbox">
+        <div class="blbl">O que voce esta sentindo ou precisa?</div>
+        <input class="binp" type="text" id="binp" placeholder="Ex: dor de cabeca, vacina, consulta...">
+        <button class="bbtn" onclick="buscar()">🔍 Encontrar unidade de saude</button>
+      </div>
+    </div>
+    <div class="urg-ban" onclick="verGuia(&#39;urgencia&#39;)">
+      <div class="urg-em">🚨</div>
+      <div><div class="urg-tt">Emergencia? Toque aqui</div><div class="urg-ds">UPAs e prontos-socorros 24h mais proximos</div></div>
+      <div style="color:rgba(255,255,255,0.55);font-size:1.1rem;">›</div>
+    </div>
+    <div class="fila-w">
+      <div class="fila-tt">⌛ Tempo de Espera Agora</div>
+      <div class="fi"><div class="fi-dot vd-c" style="background:#4CAF50;"></div><div class="fi-nm">UBS Rocinha</div><div class="fi-t vd-c">~15 min</div></div>
+      <div class="fi"><div class="fi-dot am-c" style="background:#FF9800;"></div><div class="fi-nm">UPA Rocinha</div><div class="fi-t am-c">~45 min</div></div>
+      <div class="fi"><div class="fi-dot vd-c" style="background:#4CAF50;"></div><div class="fi-nm">UBS Lapa</div><div class="fi-t vd-c">~20 min</div></div>
+      <div class="fi"><div class="fi-dot vm-c" style="background:#F44336;"></div><div class="fi-nm">UPA Senador Camara</div><div class="fi-t vm-c">+2 horas</div></div>
+    </div>
+    <div class="cat-lbl">Qual tipo de atendimento voce precisa?</div>
+    <div class="cat-grd">
+      <div class="cc u" onclick="verGuia(&#39;urgencia&#39;)"><div class="cc-em">🚨</div><div class="cc-nm">Urgencia</div><div class="cc-ds">UPA, pronto-socorro</div></div>
+      <div class="cc c" onclick="verGuia(&#39;clinico&#39;)"><div class="cc-em">🤒</div><div class="cc-nm">Clinico Geral</div><div class="cc-ds">Consulta, receita, atestado</div></div>
+      <div class="cc e" onclick="verGuia(&#39;especialista&#39;)"><div class="cc-em">👨‍⚕️</div><div class="cc-nm">Especialista</div><div class="cc-ds">Cardiologista, ortopedista</div></div>
+      <div class="cc x" onclick="verGuia(&#39;exame&#39;)"><div class="cc-em">🔬</div><div class="cc-nm">Exames</div><div class="cc-ds">Sangue, raio-x, ultrassom</div></div>
+      <div class="cc d" onclick="verGuia(&#39;dentista&#39;)"><div class="cc-em">🦵</div><div class="cc-nm">Dentista</div><div class="cc-ds">CEO, tratamento pelo SUS</div></div>
+      <div class="cc m" onclick="verGuia(&#39;mental&#39;)"><div class="cc-em">🧠</div><div class="cc-nm">Saude Mental</div><div class="cc-ds">CAPS, psicologo</div></div>
+    </div>
+    <div class="px-sec">
+      <div class="px-hdr"><div class="px-tt">UBS mais proximas de voce</div><div class="vt" onclick="ir(&#39;unidades&#39;)">Ver todas ›</div></div>
+      <div id="ubs-px"></div>
+    </div>
+  </div>
+  <div class="scr" id="s-guia">
+    <div class="guia-hero"><h2 id="g-tt">Como funciona</h2><p id="g-sb">Siga o passo a passo</p></div>
+    <div class="gl" id="g-steps"></div>
+  </div>
+  <div class="scr" id="s-unidades">
+    <div class="uni-hero"><h2>🏥 Unidades de Saude</h2><p>Selecione sua regiao</p></div>
+    <div class="regs">
+      <button class="rb on" onclick="filtReg(this,&#39;todas&#39;)">Todas</button>
+      <button class="rb" onclick="filtReg(this,&#39;norte&#39;)">Zona Norte</button>
+      <button class="rb" onclick="filtReg(this,&#39;sul&#39;)">Zona Sul</button>
+      <button class="rb" onclick="filtReg(this,&#39;oeste&#39;)">Zona Oeste</button>
+      <button class="rb" onclick="filtReg(this,&#39;centro&#39;)">Centro</button>
+      <button class="rb" onclick="filtReg(this,&#39;barra&#39;)">Barra</button>
+    </div>
+    <div class="ul" id="ul"></div>
+  </div>
+  <div class="scr" id="s-docs">
+    <div class="docs-hero"><h2>📄 Documentos Necessarios</h2><p>Saiba o que levar antes de sair</p></div>
+    <div class="dl">
+      <div class="alrt"><div class="alrt-i">⚠️</div><div class="alrt-t">Em emergencias, o atendimento NAO pode ser negado mesmo sem documentos. Leve os originais quando possivel.</div></div>
+      <div class="ds"><div class="dst">🤒 Consulta Clinica Geral (UBS)</div>
+        <div class="di"><div class="dc">✅</div><div><div class="dt">RG ou documento com foto</div></div></div>
+        <div class="di"><div class="dc">✅</div><div><div class="dt">Cartao do SUS (CNS)</div><div class="do">Se nao tiver, e emitido na propria UBS gratuitamente</div></div></div>
+        <div class="di"><div class="dc">✅</div><div><div class="dt">CPF e comprovante de residencia</div></div></div>
+      </div>
+      <div class="ds"><div class="dst">🚨 Urgencia e Emergencia (UPA)</div>
+        <div class="di"><div class="dc">✅</div><div><div class="dt">RG ou documento com foto</div></div></div>
+        <div class="di"><div class="dc">✅</div><div><div class="dt">Cartao do SUS (se tiver)</div><div class="do">Atendimento NAO pode ser negado sem documentos em emergencia</div></div></div>
+        <div class="di"><div class="dc">📋</div><div><div class="dt">Lista de medicamentos que usa</div></div></div>
+      </div>
+      <div class="ds"><div class="dst">👨‍⚕️ Especialista</div>
+        <div class="di"><div class="dc">✅</div><div><div class="dt">Encaminhamento da UBS</div><div class="do">Obrigatorio — consulte primeiro o clinico geral</div></div></div>
+        <div class="di"><div class="dc">✅</div><div><div class="dt">RG e Cartao do SUS</div></div></div>
+        <div class="di"><div class="dc">✅</div><div><div class="dt">Exames anteriores relacionados</div></div></div>
+      </div>
+      <div class="ds"><div class="dst">🦵 Dentista (CEO)</div>
+        <div class="di"><div class="dc">✅</div><div><div class="dt">RG e Cartao do SUS</div></div></div>
+        <div class="di"><div class="dc">✅</div><div><div class="dt">Encaminhamento da UBS (procedimentos complexos)</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="bnav">
+    <button id="ni-home" class="ni on" onclick="ir(&#39;home&#39;)"><span style="font-size:1.2rem;">🏠</span>Inicio</button>
+    <button id="ni-guia" class="ni" onclick="verGuia(&#39;clinico&#39;)"><span style="font-size:1.2rem;">📋</span>Guia</button>
+    <button id="ni-unidades" class="ni" onclick="ir(&#39;unidades&#39;)"><span style="font-size:1.2rem;">🏥</span>Unidades</button>
+    <button id="ni-docs" class="ni" onclick="ir(&#39;docs&#39;)"><span style="font-size:1.2rem;">📄</span>Documentos</button>
+  </div>
+</div>
+<div class="mod-bg" id="modal" onclick="fModal()"><div class="mod-box" onclick="event.stopPropagation()"><div class="mod-h"></div><div id="mod-cnt"></div></div></div>
+<script>
+var UBS=[
+  {id:1,nm:"UBS Rocinha",tp:"UBS",rg:"sul",bairro:"Rocinha",end:"Rua 4, s/n - Rocinha",tel:"(21) 3111-2200",hr:"Seg a Sex: 7h as 17h",dist:"0.8km",lat:-22.9874,lng:-43.2484,fila:"~15 min",fc:"vd",sv:["Clinico Geral","Pediatria","Ginecologia","Vacina","Farmacia"]},
+  {id:2,nm:"UPA Rocinha",tp:"UPA 24h",rg:"sul",bairro:"Rocinha",end:"Est. da Gavea, 551",tel:"(21) 3111-2500",hr:"24 horas",dist:"1.2km",lat:-22.9854,lng:-43.2465,fila:"~45 min",fc:"am",sv:["Urgencia","Emergencia","Raio-X","Laboratorio"]},
+  {id:3,nm:"UBS Padre Miguel",tp:"UBS",rg:"oeste",bairro:"Padre Miguel",end:"Rua Frei Gaspar, 10",tel:"(21) 3395-4100",hr:"Seg a Sex: 7h as 17h",dist:"15.3km",lat:-22.8978,lng:-43.4521,fila:"~30 min",fc:"vd",sv:["Clinico Geral","Odontologia","Vacina","Farmacia"]},
+  {id:4,nm:"UBS Alemao",tp:"UBS",rg:"norte",bairro:"Alemao",end:"Rua Joaquim de Queiros, 220",tel:"(21) 3111-4300",hr:"Seg a Sex: 7h as 17h",dist:"8.7km",lat:-22.8712,lng:-43.2654,fila:"~25 min",fc:"vd",sv:["Clinico Geral","Pediatria","Saude Mental","Vacina"]},
+  {id:5,nm:"UPA Senador Camara",tp:"UPA 24h",rg:"oeste",bairro:"Senador Camara",end:"Est. do Mendanha, 600",tel:"(21) 3395-7200",hr:"24 horas",dist:"18.1km",lat:-22.9012,lng:-43.4789,fila:"+2 horas",fc:"vm",sv:["Urgencia","Emergencia","Laboratorio","Radiologia"]},
+  {id:6,nm:"CAPS Madureira",tp:"CAPS",rg:"norte",bairro:"Madureira",end:"Rua Carolina Machado, 812",tel:"(21) 2111-5600",hr:"Seg a Sex: 8h as 17h",dist:"12.4km",lat:-22.8756,lng:-43.3345,fila:"~1 hora",fc:"am",sv:["Psicologo","Psiquiatra","Grupos Terapeuticos"]},
+  {id:7,nm:"CEO Barra da Tijuca",tp:"CEO",rg:"barra",bairro:"Barra",end:"Av. Ayrton Senna, 2000",tel:"(21) 3111-8900",hr:"Seg a Sex: 7h as 17h",dist:"14.6km",lat:-23.0012,lng:-43.3654,fila:"~40 min",fc:"am",sv:["Odontologia","Ortodontia","Cirurgia Oral","Protese"]},
+  {id:8,nm:"UBS Mare",tp:"UBS",rg:"norte",bairro:"Mare",end:"Rua Teixeira Ribeiro, 120",tel:"(21) 3111-6700",hr:"Seg a Sex: 7h as 17h",dist:"9.2km",lat:-22.8534,lng:-43.2345,fila:"~20 min",fc:"vd",sv:["Clinico Geral","Pediatria","Vacina","Farmacia"]},
+  {id:9,nm:"UPA Ilha do Governador",tp:"UPA 24h",rg:"norte",bairro:"Ilha Gov.",end:"Est. do Galeao, 400",tel:"(21) 3111-9200",hr:"24 horas",dist:"16.5km",lat:-22.8123,lng:-43.1987,fila:"~1 hora",fc:"am",sv:["Urgencia","Emergencia","Pediatria","Laboratorio"]},
+  {id:10,nm:"UBS Lapa",tp:"UBS",rg:"centro",bairro:"Lapa",end:"Rua Mem de Sa, 150",tel:"(21) 2111-3400",hr:"Seg a Sex: 7h as 18h",dist:"5.1km",lat:-22.9123,lng:-43.1876,fila:"~20 min",fc:"vd",sv:["Clinico Geral","Ginecologia","Vacina","DST/AIDS"]},
+];
+var G={
+  clinico:{tt:"Consulta Clinica Geral",sb:"Como conseguir consulta na UBS",st:[{e:"&#128205;",t:"Va a UBS do seu bairro",d:"Use o GPS do app para encontrar a mais proxima. Leve seus documentos."},{e:"&#127983;",t:"Pegue sua senha virtual",d:"Pelo app voce pode pegar a senha antes de sair de casa e acompanhar a fila."},{e:"&#128336;",t:"Chegue cedo",d:"A maioria das UBS distribui senhas a partir das 7h."},{e:"&#128104;&#8205;&#9877;&#65039;",t:"Aguarde o atendimento",d:"Primeiro triagem pela enfermagem. Depois consulta com o medico."},{e:"&#128138;",t:"Retire os medicamentos",d:"Com a receita, va a farmacia da propria UBS. Muitos remedios sao gratuitos."}]},
+  urgencia:{tt:"Urgencia e Emergencia",sb:"O que fazer em casos urgentes",st:[{e:"&#128680;",t:"Avalie a gravidade",d:"Risco de vida: ligue 192 (SAMU). Urgencia sem risco: va a UPA mais proxima."},{e:"&#127973;",t:"Va direto a UPA",d:"UPAs funcionam 24 horas. Sem agendamento. Atendimento NAO pode ser negado."},{e:"&#128203;",t:"Triagem na chegada",d:"Classificado por cores: vermelho (imediato), laranja (urgente), amarelo, verde."},{e:"&#9203;",t:"Aguarde sua vez",d:"Casos graves tem prioridade. Informe qualquer piora ao enfermeiro."},{e:"&#128196;",t:"Guarde o resumo de alta",d:"Peca o resumo do atendimento para continuar o tratamento na UBS."}]},
+  especialista:{tt:"Consulta com Especialista",sb:"Como conseguir encaminhamento",st:[{e:"&#129298;",t:"Consulte o clinico geral na UBS",d:"Passo obrigatorio para acessar especialistas pelo SUS."},{e:"&#128203;",t:"Solicite o encaminhamento",d:"O medico emitira um encaminhamento se necessario. Guarde bem."},{e:"&#128187;",t:"Aguarde o agendamento via SISREG",d:"Voce recebera contato com a data da consulta."},{e:"&#128193;",t:"Leve todos os exames",d:"Na consulta leve todos os exames relacionados ao problema."}]},
+  exame:{tt:"Exames pelo SUS",sb:"Como solicitar e realizar exames",st:[{e:"&#129298;",t:"Consulte o medico da UBS",d:"Exames precisam de requisicao medica."},{e:"&#128203;",t:"Receba a requisicao",d:"Verifique se esta carimbada e assinada."},{e:"&#127828;",t:"Prepare-se corretamente",d:"Sangue: jejum de 8 a 12 horas. Confirme com o medico."},{e:"&#128196;",t:"Busque o resultado e retorne",d:"Retorne a UBS para o medico avaliar."}]},
+  dentista:{tt:"Dentista pelo SUS",sb:"Como acessar o servico odontologico",st:[{e:"&#127973;",t:"Procure a UBS ou CEO",d:"UBS: servicos basicos. CEO: canal, protese, ortodontia."},{e:"&#128336;",t:"Chegue cedo",d:"Agendamento geralmente presencial."},{e:"&#128203;",t:"Documentos",d:"RG, Cartao do SUS e comprovante de residencia."},{e:"&#128260;",t:"Mantenha os retornos",d:"Muitos tratamentos exigem multiplas consultas."}]},
+  mental:{tt:"Saude Mental pelo SUS",sb:"Como acessar atendimento psicologico",st:[{e:"&#127973;",t:"Comece pela UBS",d:"Relate os sintomas ao clinico geral."},{e:"&#129504;",t:"CAPS - Centro de Atencao Psicossocial",d:"Psicologos, psiquiatras e grupos terapeuticos gratuitamente."},{e:"&#128680;",t:"Crise? CVV: ligue 188",d:"Centro de Valorizacao da Vida. 24 horas, todos os dias."},{e:"&#128138;",t:"Medicamentos psiquiatricos",d:"Muitos fornecidos gratuitamente pelo SUS."}]}
+};
+var sc=1047;
+function entrar(){
+  document.getElementById("splash").classList.add("off");
+  document.getElementById("app").classList.add("on");
+  document.getElementById("btn-vlt").style.display="inline-flex";
+  renderPx();
+  renderU(UBS);
+  startGPS();
+}
+function ir(t){
+  ["home","guia","unidades","docs"].forEach(function(x){
+    var el = document.getElementById("s-"+x);
+    if(el) el.className = "scr";
+    var ni = document.getElementById("ni-"+x);
+    if(ni) ni.className = "ni";
+  });
+  var sel = document.getElementById("s-"+t);
+  if(sel) sel.className = "scr on";
+  var nit = document.getElementById("ni-"+t);
+  if(nit) nit.className = "ni on";
+  window.scrollTo(0,0);
+  var btn = document.getElementById("btn-vlt");
+  if(btn) btn.style.display = "inline-flex";
+}
+function irHome(){
+  // Go back to splash
+  document.getElementById("app").classList.remove("on");
+  document.getElementById("splash").classList.remove("off");
+  document.getElementById("btn-vlt").style.display="none";
+}
+function buscar(){var q=document.getElementById("binp").value.toLowerCase();if(!q)return;if(q.includes("dente"))verGuia("dentista");else if(q.includes("mental")||q.includes("depressao")||q.includes("ansiedade"))verGuia("mental");else if(q.includes("urgent")||q.includes("emergencia")||q.includes("grave"))verGuia("urgencia");else if(q.includes("exame")||q.includes("sangue")||q.includes("raio"))verGuia("exame");else verGuia("clinico");}
+function verGuia(tipo){var g=G[tipo];if(!g)return;document.getElementById("g-tt").innerHTML="&#128203; "+g.tt;document.getElementById("g-sb").textContent=g.sb;var c=document.getElementById("g-steps");c.innerHTML="";g.st.forEach(function(s,i){var d=document.createElement("div");d.className="sc";d.innerHTML="<div class='sl'><div class='sn'>"+(i+1)+"</div>"+(i<g.st.length-1?"<div class='sl2'></div>":"")+"</div><div class='sbx'><div class='sej'>"+s.e+"</div><div class='st'>"+s.t+"</div><div class='sd'>"+s.d+"</div></div>";c.appendChild(d);});var btn=document.createElement("div");btn.style.cssText="background:linear-gradient(135deg,#0A1628,#1976D2);border-radius:14px;padding:1.1rem;cursor:pointer;text-align:center;color:white;margin-top:0.4rem;";btn.innerHTML="<div style='font-size:1.3rem;margin-bottom:0.3rem;'>&#127973;</div><div style='font-weight:700;font-size:0.9rem;'>Encontrar unidade proxima</div>";btn.onclick=function(){ir("unidades");};c.appendChild(btn);ir("guia");}
+function criarCard(u){var cs={"UPA 24h":"#C62828","CAPS":"#1B5E20","CEO":"#6A1B9A","UBS":"#0D47A1"};var cor=cs[u.tp]||"#0D47A1";var d=document.createElement("div");d.className="ubs-c";d.style.borderLeftColor=cor;var tgs=u.sv.slice(0,3).map(function(s){return "<span class='ubs-tg'>"+s+"</span>";}).join("");d.innerHTML="<div class='ubs-h'><div><div class='ubs-nm'>"+u.nm+"</div><div class='ubs-tp' style='color:"+cor+";'>"+u.tp+"</div></div><div class='ubs-dt'>&#128205; "+u.dist+"</div></div><div class='ubs-tgs'>"+tgs+"</div><div class='ubs-fl'><div class='ubs-fl-l'>&#8987; Espera agora:</div><div class='ubs-fl-b "+u.fc+"-c'>"+u.fila+"</div></div><div style='font-size:0.72rem;color:var(--mt);margin-bottom:0.62rem;'>&#128336; "+u.hr+"</div><div class='ubs-ft'><button class='bmp' onclick='aMaps("+u.lat+","+u.lng+")'>&#128205; Como Chegar</button><button class='bsn' onclick='senha("+u.id+")'>&#127983; Senha</button><button class='bin' onclick='verU("+u.id+")'>+Info</button></div>";return d;}
+function renderPx(){var c=document.getElementById("ubs-px");c.innerHTML="";UBS.slice(0,3).forEach(function(u){c.appendChild(criarCard(u));});}
+function renderU(lista){var c=document.getElementById("ul");c.innerHTML="";lista.forEach(function(u){c.appendChild(criarCard(u));});}
+function filtReg(btn,rg){document.querySelectorAll(".rb").forEach(function(b){b.className="rb";});btn.className="rb on";var l=rg==="todas"?UBS:UBS.filter(function(u){return u.rg===rg;});renderU(l);}
+function senha(id){var u=UBS.find(function(x){return x.id===id;});if(!u)return;sc++;var h=new Date().getHours().toString().padStart(2,"0")+":"+new Date().getMinutes().toString().padStart(2,"0");document.getElementById("mod-cnt").innerHTML="<div style='text-align:center;'><div style='font-size:0.65rem;font-weight:700;color:var(--az);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem;'>&#127983; SENHA VIRTUAL</div><div style='font-family:Instrument Serif,serif;font-size:3.5rem;color:var(--az);margin:0.5rem 0;'>"+sc+"</div><div style='background:var(--azb);border-radius:12px;padding:1rem;margin-bottom:1rem;text-align:left;'><div style='display:flex;justify-content:space-between;font-size:0.83rem;margin-bottom:0.35rem;'><span style='color:var(--mt);'>Unidade:</span><span style='font-weight:700;'>"+u.nm+"</span></div><div style='display:flex;justify-content:space-between;font-size:0.83rem;margin-bottom:0.35rem;'><span style='color:var(--mt);'>Horario:</span><span style='font-weight:700;'>"+h+"</span></div><div style='display:flex;justify-content:space-between;font-size:0.83rem;'><span style='color:var(--mt);'>Espera:</span><span style='font-weight:700;color:var(--vd);'>"+u.fila+"</span></div></div><div style='font-size:0.75rem;color:var(--mt);font-style:italic;margin-bottom:1rem;'>Apresente este numero ao chegar na unidade</div><button class='mok' onclick='fModal()'>&#9989; Entendido</button><button class='mcl' onclick='fModal()'>Fechar</button></div>";document.getElementById("modal").classList.add("on");}
+function verU(id){var u=UBS.find(function(x){return x.id===id;});if(!u)return;var cs={"UPA 24h":"#FFEBEE","CAPS":"#E8F5E9","CEO":"#F3E5F5","UBS":"var(--azb)"};var ct={"UPA 24h":"#C62828","CAPS":"#1B5E20","CEO":"#6A1B9A","UBS":"var(--az)"};document.getElementById("mod-cnt").innerHTML="<div style='display:inline-block;padding:0.22rem 0.75rem;border-radius:50px;font-size:0.65rem;font-weight:700;background:"+(cs[u.tp]||"var(--azb)")+";color:"+(ct[u.tp]||"var(--az)")+";margin-bottom:0.55rem;'>"+u.tp+"</div><div style='font-family:Instrument Serif,serif;font-size:1.25rem;margin-bottom:0.18rem;'>"+u.nm+"</div><div style='font-size:0.8rem;color:var(--mt);margin-bottom:0.75rem;'>&#128205; "+u.end+"</div><div style='font-size:0.65rem;font-weight:700;color:var(--mt);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.4rem;'>Servicos</div><div style='display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:0.75rem;'>"+u.sv.map(function(s){return "<span style='padding:0.22rem 0.65rem;border-radius:50px;font-size:0.72rem;font-weight:600;background:var(--azb);color:var(--az);'>"+s+"</span>";}).join("")+"</div><div style='font-size:0.82rem;margin-bottom:0.28rem;'>&#8987; "+u.hr+"</div><div style='font-size:0.82rem;margin-bottom:0.75rem;'>&#9742;&#65039; "+u.tel+"</div><button class='mok' onclick='aMaps("+u.lat+","+u.lng+")'>&#128205; Como Chegar</button><button class='mcl' onclick='fModal()'>Fechar</button>";document.getElementById("modal").classList.add("on");}
+function aMaps(lat,lng){window.open("https://www.google.com/maps/dir/?api=1&destination="+lat+","+lng,"_blank");}
+function fModal(){document.getElementById("modal").classList.remove("on");}
+var tCur = 0;
+var tTotal = 4;
+
+function mostrarTutorial(){
+  document.getElementById("splash").classList.add("off");
+  document.getElementById("tutorial").style.display="block";
+  tCur = 0;
+  atualizarSlide();
+}
+
+function pularTutorial(){
+  document.getElementById("tutorial").style.display="none";
+  entrar();
+}
+
+function tNext(){
+  if(tCur < tTotal-1){
+    tCur++;
+    atualizarSlide();
+  } else {
+    pularTutorial();
+  }
+}
+
+function tPrev(){
+  if(tCur > 0){
+    tCur--;
+    atualizarSlide();
+  }
+}
+
+function atualizarSlide(){
+  for(var i=0;i<tTotal;i++){
+    var s = document.getElementById("ts"+i);
+    var d = document.getElementById("td"+i);
+    if(s) s.className = i===tCur ? "tslide on" : "tslide";
+    if(d) d.className = i===tCur ? "tdot on" : "tdot";
+  }
+  var prev = document.getElementById("tbtn-prev");
+  var next = document.getElementById("tbtn-next");
+  if(prev) prev.style.display = tCur===0 ? "none" : "block";
+  if(next) next.textContent = tCur===tTotal-1 ? "Comecar!" : "Proximo →";
+}
+
+function startGPS(){if(!navigator.geolocation)return;navigator.geolocation.getCurrentPosition(function(p){document.getElementById("gps-txt").textContent="GPS "+Math.round(p.coords.accuracy)+"m";},function(){document.getElementById("gps-txt").textContent="GPS ATIVO";},{enableHighAccuracy:true,timeout:10000});}
+</script>
+
+</body></html>
